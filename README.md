@@ -65,7 +65,22 @@ The **kinova-joint-tasks-main/** folder contains **all ROS 2 code for real-robot
 - **figures/**: figures used in the paper + this README.
 
 ---
+## Figures
 
+
+### Pipeline overview (Phase 1–6)
+![Pipeline overview](figures/Systemoverview.png)
+
+### System overview
+![System overview](figures/Systemoverview.png)
+
+### Experimental protocol and labeling timeline
+![Protocol](figures/protocol.png)
+
+### TriSaFe-Trans architecture
+![Architecture](figures/Transarchitecture.png)
+
+---
 ## Repository layout
 
 ```text
@@ -96,24 +111,7 @@ SafeIntentDetectionPaperDec2025/
 └── README.md
 
 
-## Figures
 
-```text
-
-
-### Pipeline overview (Phase 1–6)
-![Pipeline overview](figures/Systemoverview.png)
-
-### System overview
-![System overview](figures/Systemoverview.png)
-
-### Experimental protocol and labeling timeline
-![Protocol](figures/protocol.png)
-
-### TriSaFe-Trans architecture
-![Architecture](figures/Transarchitecture.png)
-
----
 
 ## Environment setup
 
