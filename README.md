@@ -13,12 +13,17 @@ This repository provides two deliverables:
 ## Table of contents
 - [What this repository contains](#what-this-repository-contains)
 - [Repository layout](#repository-layout)
+- [Figures](#figures)
 - [Quickstart](#quickstart)
   - [A) ML pipeline](#a-ml-pipeline)
   - [B) Real robot (ROS 2)](#b-real-robot-ros-2)
 - [TriSaFe-Trans pipeline (Phase 1–6)](#trisafe-trans-pipeline-phase-16)
 - [Real robot implementation (Kinova Gen3 + Robotiq 2F-85)](#real-robot-implementation-kinova-gen3--robotiq-2f-85)
-- [Figures](#figures)
+  - [End-to-end system flow](#end-to-end-system-flow)
+  - [Waypoint task recording](#waypoint-task-recording)
+  - [Running the robot code (kinova-joint-tasks-main)](#running-the-robot-code-kinova-joint-tasks-main)
+  - [Run tasks](#run-tasks)
+- [Environment setup](#environment-setup)
 - [Data availability](#data-availability)
 - [Citation](#citation)
 - [License](#license)
@@ -82,8 +87,14 @@ SafeIntentDetectionPaperDec2025/
 │   └── Phase 6 (BioRob RQ) .ipynb
 │
 ├── figures/                        # Paper/README figures
+│   ├── Systemoverview.png
+│   ├── Transarchitecture.png
+│   ├── awarepipeline.png
+│   └── protocol.png
+│
 ├── kinova-joint-tasks-main/        # ROS 2 + Kinova Gen3 + Robotiq execution (waypoints + inference trigger)
 └── README.md
+
 
 ```text
 ## Figures
