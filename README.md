@@ -1,6 +1,7 @@
 # SafeIntentDetectionPaperDec2025  
 **Companion repository** for the paper *Safety-Aware Multimodal Intent Recognition with EEG, EMG, and Eye Tracking for Assistive Robotics (TriSaFe-Trans)*.  
-This repo provides: **(1) full training/evaluation code** (Implementation/) and **(2) real-robot execution code** for **Kinova Gen3 + Robotiq 2F-85** via **ROS 2** (kinova-joint-tasks-main/), along with figures and supporting notebooks.
+This repo provides: **(1) full training/evaluation code** (Implementation/) and
+**(2) real-robot execution code** for **Kinova Gen3 + Robotiq 2F-85** via **ROS 2** (kinova-joint-tasks-main/), along with figures and supporting notebooks.
 
 > **Status:** Code release for reproducibility. **Dataset will be made available later** (see [Data availability](#data-availability)).
 
