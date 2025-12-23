@@ -89,16 +89,16 @@ SafeIntentDetectionPaperDec2025/
 ## Figures
 
 ### Pipeline overview (Phase 1–6)
-![Pipeline overview](figures/Group%2039.png)
+![Pipeline overview](figures/awarepipeline.png)
 
 ### System overview
-![System overview](figures/Group%2056.png)
+![System overview](figures/Systemoverview.png)
 
 ### Experimental protocol and labeling timeline
 ![Protocol](figures/protocol.png)
 
 ### TriSaFe-Trans architecture
-![Architecture](figures/Group%2026.png)
+![Architecture](figures/Transarchitecture.png)
 
 ---
 
