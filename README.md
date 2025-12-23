@@ -1,24 +1,51 @@
 # SafeIntentDetectionPaperDec2025  
-**Companion repository** for the paper *Safety-Aware Multimodal Intent Recognition with EEG, EMG, and Eye Tracking for Assistive Robotics (TriSaFe-Trans)*.  
-This repo provides: **(1) full training/evaluation code** (Implementation/) and
-**(2) real-robot execution code** for **Kinova Gen3 + Robotiq 2F-85** via **ROS 2** (kinova-joint-tasks-main/), along with figures and supporting notebooks.
+**Companion repository** for the paper *Safety-Aware Multimodal Intent Recognition with EEG, EMG, and Eye Tracking for Assistive Robotics (TriSaFe-Trans)*.
+
+This repository provides two deliverables:
+
+1) **TriSaFe-Trans training/evaluation pipeline** (Phase 1–6) for safety-aware multimodal intent recognition from **EEG + EMG + Eye Tracking**.  
+2) **Real-robot implementation** on **Kinova Gen3 (6-DoF) + Robotiq 2F-85** using **ROS 2**, where an inferred **task ID** triggers autonomous execution by replaying **pre-recorded joint waypoint trajectories**.
 
 > **Status:** Code release for reproducibility. **Dataset will be made available later** (see [Data availability](#data-availability)).
 
 ---
 
+## Table of contents
+- [What this repository contains](#what-this-repository-contains)
+- [Repository layout](#repository-layout)
+- [Quickstart](#quickstart)
+  - [A) ML pipeline](#a-ml-pipeline)
+  - [B) Real robot (ROS 2)](#b-real-robot-ros-2)
+- [TriSaFe-Trans pipeline (Phase 1–6)](#trisafe-trans-pipeline-phase-16)
+- [Real robot implementation (Kinova Gen3 + Robotiq 2F-85)](#real-robot-implementation-kinova-gen3--robotiq-2f-85)
+- [Figures](#figures)
+- [Data availability](#data-availability)
+- [Citation](#citation)
+- [License](#license)
+
+---
+
 ## What this repository contains
 
-### 1) TriSaFe-Trans ML pipeline (Implementation/)
-The **Implementation/** folder contains **all training and evaluation code** for the BioRob paper pipeline, including:
-- multimodal synchronization (EEG/EMG/ET),
-- labeling (REST vs ACTION + task),
-- LOSO split generation,
-- deterministic preprocessing/caching,
-- SSL pretraining + supervised fine-tuning,
-- robustness evaluation (S0–S3) and policy-level evaluation (P0–P2) using safety metrics (SAE/UAR/MIR/NRA).
+### 1) TriSaFe-Trans ML pipeline (Implementation/ + Notebooks/)
+The ML code is organized in two places:
 
-> If you are here for the ML model and experiments, start in **Implementation/**.
+**Implementation/**  
+- Contains the **primary run entry** for training/evaluation used in this repository:
+  - `Phase-6(All-Sub).ipynb` — train/evaluate in an “all-subject” configuration
+  - `Download_train_Model.text` — instructions/notes for downloading a trained checkpoint
+
+**Notebooks/**  
+- Contains the **full Phase 1–6 pipeline notebooks** used to reproduce the BioRob experiments:
+  - Phase 1: metadata + scanning + synchronization
+  - Phase 2: safety-aware labeling (HSMM-like)
+  - Phase 3: manifest + TRUE LOSO splits
+  - Phase 4: deterministic preprocessing/caching
+  - Phase 5: LOSO exporter
+  - Phase 5.5: feature extraction
+  - Phase 6: training + robustness/policy evaluation
+
+> If you are here for the model and experiments, start with **Implementation/** for a fast run, or **Notebooks/** for full reproduction.
 
 ### 2) Real robot execution (kinova-joint-tasks-main/)
 The **kinova-joint-tasks-main/** folder contains **all ROS 2 code for real-robot implementation**, including:
@@ -29,24 +56,8 @@ The **kinova-joint-tasks-main/** folder contains **all ROS 2 code for real-robot
 > If you are here to run the robot (ROS 2 + Kinova), start in **kinova-joint-tasks-main/**.
 
 ### 3) Notebooks and figures
-- **Notebooks/**: analysis notebooks, plots, and reporting utilities.
+- **Notebooks/**: full pipeline notebooks, plots, and reporting utilities.
 - **figures/**: figures used in the paper + this README.
-
----
-
-## Figures
-
-### Pipeline overview (Phase 1–6)
-![Pipeline overview](figures/awarepipeline.png)
-
-### System overview
-![System overview](figures/Systemoverview.png)
-
-### Experimental protocol and labeling timeline
-![Protocol](figures/protocol.png)
-
-### TriSaFe-Trans architecture
-![Architecture](figures/Transarchitecture.png)
 
 ---
 
@@ -54,8 +65,22 @@ The **kinova-joint-tasks-main/** folder contains **all ROS 2 code for real-robot
 
 ```text
 SafeIntentDetectionPaperDec2025/
-├── Implementation/              # ✅ All model training + preprocessing + evaluation code (Phase 1–6)
-├── Notebooks/                   # Analysis notebooks, plots, reporting
-├── figures/                     # Paper/README figures
-├── kinova-joint-tasks-main/     # ✅ ROS 2 + Kinova Gen3 real-robot execution (waypoints + inference trigger)
+├── Implementation/                 # ✅ Minimal entry for training/inference (all-subject run)
+│   ├── Phase-6(All-Sub).ipynb      # Main notebook: train/evaluate (all subjects)
+│   └── Download_train_Model.text   # Notes to download trained model/checkpoints
+│
+├── Notebooks/                      # ✅ Full Phase 1–6 pipeline notebooks (reproducibility)
+│   ├── Phase-1-A(Meta-Data).ipynb
+│   ├── Phase-1-B(Scans each Sub).ipynb
+│   ├── Phase-1-C-Synchronizer.ipynb
+│   ├── Phase-2-A- Labeler — HSMM (Single-Action).ipynb
+│   ├── Phase-2-B.ipynb
+│   ├── Phase 3 — Manifest & TRUE LOSO splits.ipynb
+│   ├── Phase 4 — Deterministic Preprocessing .ipynb
+│   ├── Phase 5 — LOSO Exporter.ipynb
+│   ├── Phase 5.5 — Feature Extraction.ipynb
+│   └── Phase 6 (BioRob RQ) .ipynb
+│
+├── figures/                        # Paper/README figures
+├── kinova-joint-tasks-main/        # ✅ ROS 2 + Kinova Gen3 + Robotiq execution (waypoints + inference trigger)
 └── README.md
