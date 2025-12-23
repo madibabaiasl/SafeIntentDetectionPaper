@@ -96,8 +96,10 @@ SafeIntentDetectionPaperDec2025/
 └── README.md
 
 
-```text
 ## Figures
+
+```text
+
 
 ### Pipeline overview (Phase 1–6)
 ![Pipeline overview](figures/Systemoverview.png)
