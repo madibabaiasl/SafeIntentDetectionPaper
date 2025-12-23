@@ -84,3 +84,48 @@ SafeIntentDetectionPaperDec2025/
 ├── figures/                        # Paper/README figures
 ├── kinova-joint-tasks-main/        # ✅ ROS 2 + Kinova Gen3 + Robotiq execution (waypoints + inference trigger)
 └── README.md
+
+
+## Figures
+
+### Pipeline overview (Phase 1–6)
+![Pipeline overview](figures/Group%2039.png)
+
+### System overview
+![System overview](figures/Group%2056.png)
+
+### Experimental protocol and labeling timeline
+![Protocol](figures/protocol.png)
+
+### TriSaFe-Trans architecture
+![Architecture](figures/Group%2026.png)
+
+---
+
+## Environment setup
+
+### Recommended
+- Python **3.10+**
+- OS: Ubuntu 20.04/22.04 recommended (works on Windows with path adjustments)
+- GPU optional (Phase 6 training benefits from CUDA)
+
+### Install dependencies
+Create a clean environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install numpy pandas scipy scikit-learn matplotlib tqdm jupyter
+# If you run Phase-6 training:
+pip install torch
+
+
+
+@inproceedings{TriSaFeTrans_BioRob2025,
+  title        = {Safety-Aware Multimodal Intent Recognition with EEG, EMG, and Eye Tracking for Assistive Robotics},
+  author       = {Tipu Sultan and Md Shariful Islam and others},
+  booktitle    = {IEEE/RAS-EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob)},
+  year         = {2025},
+  note         = {To appear. Update this entry with DOI/URL when available.}
+}
