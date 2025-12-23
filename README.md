@@ -110,14 +110,7 @@ SafeIntentDetectionPaperDec2025/
 ├── kinova-joint-tasks-main/        # ROS 2 + Kinova Gen3 + Robotiq execution (waypoints + inference trigger)
 └── README.md
 
-
-<br/>
-
 ---
-
-## Repository layout
-
-
 
 ## Environment setup
 
