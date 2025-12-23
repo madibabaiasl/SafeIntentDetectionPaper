@@ -121,8 +121,8 @@ pip install numpy pandas scipy scikit-learn matplotlib tqdm jupyter
 pip install torch
 
 
-
-@inproceedings{TriSaFeTrans_BioRob2025,
+## We will update this part
+@inproceedings{-----------,
   title        = {Safety-Aware Multimodal Intent Recognition with EEG, EMG, and Eye Tracking for Assistive Robotics},
   author       = {Tipu Sultan and Md Shariful Islam and others},
   booktitle    = {IEEE/RAS-EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob)},
