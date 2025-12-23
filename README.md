@@ -65,11 +65,11 @@ The **kinova-joint-tasks-main/** folder contains **all ROS 2 code for real-robot
 
 ```text
 SafeIntentDetectionPaperDec2025/
-├── Implementation/                 # ✅ Minimal entry for training/inference (all-subject run)
+├── Implementation/                 # Minimal entry for training/inference (all-subject run)
 │   ├── Phase-6(All-Sub).ipynb      # Main notebook: train/evaluate (all subjects)
 │   └── Download_train_Model.text   # Notes to download trained model/checkpoints
 │
-├── Notebooks/                      # ✅ Full Phase 1–6 pipeline notebooks (reproducibility)
+├── Notebooks/                      # Full Phase 1–6 pipeline notebooks (reproducibility)
 │   ├── Phase-1-A(Meta-Data).ipynb
 │   ├── Phase-1-B(Scans each Sub).ipynb
 │   ├── Phase-1-C-Synchronizer.ipynb
@@ -82,14 +82,14 @@ SafeIntentDetectionPaperDec2025/
 │   └── Phase 6 (BioRob RQ) .ipynb
 │
 ├── figures/                        # Paper/README figures
-├── kinova-joint-tasks-main/        # ✅ ROS 2 + Kinova Gen3 + Robotiq execution (waypoints + inference trigger)
+├── kinova-joint-tasks-main/        # ROS 2 + Kinova Gen3 + Robotiq execution (waypoints + inference trigger)
 └── README.md
 
 
 ## Figures
 
 ### Pipeline overview (Phase 1–6)
-![Pipeline overview](figures/awarepipeline.png)
+![Pipeline overview](figures/Systemoverview.png)
 
 ### System overview
 ![System overview](figures/Systemoverview.png)
