@@ -64,21 +64,6 @@ The **kinova-joint-tasks-main/** folder contains **all ROS 2 code for real-robot
 - **Notebooks/**: full pipeline notebooks, plots, and reporting utilities.
 - **figures/**: figures used in the paper + this README.
 
----
-## Figures
-
-
-### Pipeline overview (Phase 1–6)
-![Pipeline overview](figures/Systemoverview.png)
-
-### System overview
-![System overview](figures/Systemoverview.png)
-
-### Experimental protocol and labeling timeline
-![Protocol](figures/protocol.png)
-
-### TriSaFe-Trans architecture
-![Architecture](figures/Transarchitecture.png)
 
 ---
 ---
