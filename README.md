@@ -1,5 +1,5 @@
 # Safe Intent Detection Paper 
-**Companion repository** for the paper *Safety-Aware Multimodal Intent Recognition with EEG, EMG, and Eye Tracking for Assistive Robotics (TriSaFe-Trans)*.
+**Companion repository** for the paper *TriSaFe-Trans: A Safety-Aware Multimodal Intent Recognition Pipeline for Assistive Robotics*.
 
 This repository provides two deliverables:
 
