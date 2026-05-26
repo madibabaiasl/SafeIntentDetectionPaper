@@ -39,6 +39,39 @@ If users start from already cleaned/anonymized files, they should begin from **P
 
 ---
 
+## Important Note About File Paths
+
+Before running the notebooks, users must update the file paths according to their own data folder location. The paths used in the notebooks are examples from the original development environment and will not work on another computer unless the same folder structure exists.
+
+At the beginning of each notebook, check the configuration/path cell and update variables such as:
+
+```python
+ROOT_DIR = Path("/path/to/your/data/folder")
+DATASET_DIR = ROOT_DIR / "_dataset_icml_v1"
+```
+
+For Phase 6, also check the configuration class and update:
+
+```python
+class CFG:
+    ROOT_DIR = Path("/path/to/your/data/folder")
+    DATASET_DIR = ROOT_DIR / "_dataset_icml_v1"
+```
+
+Example:
+
+```python
+# Linux / HPC example
+ROOT_DIR = Path("/home/username/SafeIntentDetectionPaper/data")
+
+# Windows example
+ROOT_DIR = Path(r"C:\Users\username\SafeIntentDetectionPaper\data")
+```
+
+All phase outputs are written relative to this root folder. If the path is not updated correctly, later phases will not find files such as `manifest_v1.csv`, `.preproc.npz`, fold-wise `.npz` shards, or feature files.
+
+---
+
 ## Recommended Run Order
 
 Run the notebooks in the following order:
@@ -309,13 +342,21 @@ The actual data directory may be outside the repository. Update the root path va
 
 ### Step 1 — Update paths
 
-Before running any notebook, update the root directory path in the configuration cell. Example:
+Before running any notebook, update the root directory path in the configuration/path cell according to your own data folder. Example:
 
 ```python
-ROOT_DIR = Path("/path/to/project/data")
+ROOT_DIR = Path("/path/to/your/data/folder")
 ```
 
-All later phases depend on this path.
+For Phase 6, update the path inside the `CFG` class:
+
+```python
+class CFG:
+    ROOT_DIR = Path("/path/to/your/data/folder")
+    DATASET_DIR = ROOT_DIR / "_dataset_icml_v1"
+```
+
+All later phases depend on this path. If the path is wrong, the notebook may run but fail to find required files from previous phases.
 
 ---
 
