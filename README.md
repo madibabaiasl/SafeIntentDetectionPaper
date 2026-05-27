@@ -1,4 +1,4 @@
-# SafeIntentDetectionPaper
+# Safe Intent Detection Paper
 
 **Companion repository** for the paper:
 
