@@ -32,7 +32,7 @@ SafeIntentDetectionPaper/
 │
 ├── Implementation/
 │   ├── Download_train_Model.text
-│   └── Phase-6(All-Sub).ipynb
+│   
 │
 ├── Notebooks/
 │   ├── Phase1A.ipynb
